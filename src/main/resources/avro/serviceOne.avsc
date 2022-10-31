@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "ServiceOne",
+  "namespace":"com.example",
+  "fields": [
+    { "name": "contract_name","type": "string"},
+    { "name": "status","type": "string"}
+  ]
+}

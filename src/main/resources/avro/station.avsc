@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "Station",
+  "namespace":"com.example",
+  "fields": [
+    { "name": "address","type": [ "null", "string"]},
+    { "name": "available_bike_stands","type": "long"},
+    { "name": "available_bikes","type": "long"},
+    { "name": "banking","type": "boolean"},
+    { "name": "bike_stands","type": "long"},
+    { "name": "bonus","type": "boolean"},
+    { "name": "contract_name","type": "string"},
+    { "name": "name" ,"type": "string"},
+    { "name": "number","type": "long"},
+    {"name": "position", "type": {"type" : "record", "name" : "position", "fields" : [{"name": "lat", "type": "double"},{"name": "lng", "type": "double"}]}},
+    { "name": "status","type": "string"}
+  ]
+}
