@@ -27,7 +27,7 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
    
    4. create to **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams)
 kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesresponses --replication-factor 1 --partitions 1 
-### 4. launch all classes
+### 4. launch all main classes
 ## results:
 all incoplete messages are completted and pushed in wikichangesresponses topic
 
