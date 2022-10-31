@@ -6,7 +6,7 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
 2. we will inject an incomplete message (a station with incomplete information)
 3. we use kafka stream to complete the message and store it in another topic in real time
 <br>
-<br>
+
 ## needed tools:
 1. Docker (and docker-compose)
 2. java 8
@@ -28,6 +28,8 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
    4. create to **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams)
 kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesresponses --replication-factor 1 --partitions 1 
 ### 4. launch all main classes
+<br>
+
 ## results:
 all incoplete messages are completted and pushed in wikichangesresponses topic
 
