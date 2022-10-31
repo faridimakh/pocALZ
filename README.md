@@ -26,16 +26,16 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
 
 ### 3. create topics:
 
-   1. create **compacted** topic databaseCollection: used as table to store data in a kafka topic (update not insert) (it represent the collection in database):
+   1. create **compacted** topic databaseCollection: used as table to store data in a kafka topic (update not insert) (it represent the collection in database):<br>
     _kafka-topics --create --zookeeper zookeeper:2181 --topic databaseCollection --replication-factor 1 --partitions 1 --config "cleanup.policy=compact" --config min.cleanable.dirty.ratio=0.001 --config segment.ms=3000_
-   2. create topic **wikichangesrequests**: random incomplete message will pushed here:
+   2. create topic **wikichangesrequests**: random incomplete message will pushed here:<br>
     _kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesrequests --replication-factor 1 --partitions 1_
    
-   3. create to **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams)
+   3. create topic **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams):<br>
 kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesresponses --replication-factor 1 --partitions 1 
 ### 4. launch all main classes
 <br>
 
 ## results:
-all incomplete messages are completted and pushed in **wikichangesresponses** topic
+all incomplete messages are completed and pushed in **wikichangesresponses** topic
 
