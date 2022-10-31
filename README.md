@@ -17,12 +17,12 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
 ### 1. build services locally:
 
  build :zookeeper kafka brocker, kafka-connect, schema-registry,ksql:
- <br> _docker-compose up -d
+ <br> _docker-compose up -d_
 
 ### 2. buid the project: 
 
- to build the avro classes(Station, ServiceOne)
-<br> mvn clean package:
+ to build the avro classes(Station, ServiceOne):
+<br> _mvn clean package_
 
 ### 3. create topics:
 
