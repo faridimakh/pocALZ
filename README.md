@@ -8,13 +8,19 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
 <br>
 
 ## needed tools:
+
 1. Docker (and docker-compose)
 2. java 8
+
 ## how to use :
+
 ### 1. build services locally:
-  build :zookeeper kafka brocker, kafka-connect, schema-registry,ksql:
-   <br> _docker-compose up -d_
+
+ build :zookeeper kafka brocker, kafka-connect, schema-registry,ksql:
+ <br> _docker-compose up -d
+
 ### 2. buid the project: 
+
  to build the avro classes(Station, ServiceOne)
 <br> mvn clean package:
 
@@ -25,7 +31,7 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
    2. create topic **wikichangesrequests**: random incomplete message will pushed here:
     _kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesrequests --replication-factor 1 --partitions 1_
    
-   4. create to **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams)
+   3. create to **wikichangesresponses**: to store the result,complete messagesse will finded and pushed in this message (using kafka streams)
 kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesresponses --replication-factor 1 --partitions 1 
 ### 4. launch all main classes
 <br>
