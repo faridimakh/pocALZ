@@ -16,7 +16,7 @@ and we store them in a compacted KAFKA topic (a json list containing 2504 statio
 
 ### 1. build services locally:
 
- build :zookeeper kafka brocker, kafka-connect, schema-registry,ksql:
+ build services:zookeeper kafka brocker, kafka-connect, schema-registry,ksql :
  <br> _docker-compose up -d_
 
 ### 2. buid the project: 
@@ -37,5 +37,5 @@ kafka-topics --create --zookeeper zookeeper:2181 --topic wikichangesresponses --
 <br>
 
 ## results:
-all incoplete messages are completted and pushed in wikichangesresponses topic
+all incomplete messages are completted and pushed in **wikichangesresponses** topic
 
